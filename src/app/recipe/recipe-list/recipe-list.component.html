@@ -1,5 +1,13 @@
-<app-recipe-item></app-recipe-item>
-<app-recipe-item></app-recipe-item>
-<app-recipe-item></app-recipe-item>
-<app-recipe-item></app-recipe-item>
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div *ngFor="let recipe of recipes">
+      <app-recipe-item [recipe]=recipe></app-recipe-item>
+    </div>
+  </div>
+</div>
