@@ -1,5 +1,5 @@
-<app-header>
+<app-header (onSelectRoute)="onNavigate($event)">
   <div class="pt-2"></div>
-  <app-recipe></app-recipe>
-  <app-shopping></app-shopping>
+  <app-recipe *ngIf="whatFeatureToShow('recipes')"></app-recipe>
+  <app-shopping *ngIf="whatFeatureToShow('shopping-list')"></app-shopping>
 </app-header>
