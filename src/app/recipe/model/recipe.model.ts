@@ -1,3 +1,5 @@
+import { isEmptyExpression } from "@angular/compiler";
+
 export class Recipe {
   public name: string;
   public description: string;
@@ -7,5 +9,9 @@ export class Recipe {
     this.name = name;
     this.description = description;
     this.imagePath = imagePath;
+  }
+
+  isEmpty() {
+    return this.name === '' && this.imagePath === '' && this.imagePath === '';
   }
 }
