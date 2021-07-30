@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import { DropdownDirective } from './dropdown.directive';
 
-const sharedComponents = [HeaderComponent]
+const sharedComponents = [HeaderComponent, DropdownDirective];
 
 @NgModule({
   declarations: sharedComponents,
   exports: sharedComponents,
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule]
 })
-export class SharedModule { }
+export class SharedModule {}
