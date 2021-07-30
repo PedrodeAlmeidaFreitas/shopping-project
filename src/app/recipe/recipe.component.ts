@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Recipe } from './model/recipe.model';
+import { RecipeService } from './services/recipe.service';
 
 @Component({
   selector: 'app-recipe',
@@ -8,6 +9,8 @@ import { Recipe } from './model/recipe.model';
 })
 export class RecipeComponent {
   actualRecipe: Recipe = {} as Recipe;
+
+  constructor(private recipeService: RecipeService) { }
 
   setRecipe(recipe: Recipe) {
     this.actualRecipe = recipe;
